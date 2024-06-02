@@ -1,0 +1,12 @@
+.Navbar{
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem 3rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+    align-items: center;
+}
+
+.Navbar a:hover{
+    color: blue;
+}
