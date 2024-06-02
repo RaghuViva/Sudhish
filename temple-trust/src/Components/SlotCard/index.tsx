@@ -5,13 +5,14 @@ import defaultProfilePic from '../../Assets/images/default-pfp.svg';
 
 interface SlotCardPropsType {
     name: string;
+    date: string;
     image: string;
     pooja: string;
     time: string;
 }
 
 const SlotCard: React.FC<SlotCardPropsType> = (props) => {
-    const {name, image, pooja, time,} = props;
+    const {name, date, image, pooja, time,} = props;
     return (
         <div className="slot">
             <div className="imageContainer">
@@ -23,7 +24,7 @@ const SlotCard: React.FC<SlotCardPropsType> = (props) => {
                     <p>{pooja}</p>
                 </div>
                 <div>
-                    <p>10/06/2024 {time}</p>
+                    <p>{date} {time}</p>
                 </div>
             </div>
         </div>

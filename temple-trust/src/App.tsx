@@ -8,6 +8,7 @@ import AuthenticatedNavbar from './Components/Navbar/AuthenticatedNavbar';
 import NonAuthenticatedNavbar from './Components/Navbar/NonAuthenticatedNavbar';
 import { Provider } from 'react-redux';
 import Store from './Store/Store';
+import Footer from './Components/Footer';
 
 function App() {
   const profile = false;
@@ -18,15 +19,17 @@ function App() {
         {
           profile ?
           (
-            <>
+            <div className="container">
               <AuthenticatedNavbar/>
               <HomePage/>
-            </>
+              <Footer/>
+            </div>
           ) : (
-            <>
+            <div className="container">
               <NonAuthenticatedNavbar/>
               <AuthenticationRoutes/>
-            </>
+              <Footer/>
+            </div>
           )
         }
       </BrowserRouter>

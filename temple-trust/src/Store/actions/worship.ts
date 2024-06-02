@@ -10,8 +10,7 @@ export const getWorshipListSuccess  = (slots: any[]) => {
 };
 
 export const getWorshipList = (setData: any) => {
-    const googleSheetUrl = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRrNGKkhK4vaDadV7GC-AApFCjF6hfvP9I6deMe7fwKMSmqiC1qCfES3kbhRLiMBmf7nMIKWSLlLXBU/pub?gid=0&single=true&output=csv";
-    
+    const googleSheetUrl = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQdEDgiSKLIScboR0F_g-E_nY0t-P9y6Bfph6Fct4IICF1G87dij7ls6tSAhErO9BY4xX3ur1bfXWYZ/pub?gid=0&single=true&output=csv";
     axios.get(googleSheetUrl)
     .then((res)=>{
         const csvData = res.data;

@@ -5,6 +5,7 @@ import { getWorshipList, getWorshipListSuccess } from "../../Store/actions/worsh
 import Loader from "../../Components/Loader";
 import SlotCard from "../../Components/SlotCard";
 import AutoScroller from "../../Components/AutoScroller";
+import './index.css';
 
 const HomePage = () => {
     const [data, setData] = useState<any>(null);
@@ -20,7 +21,7 @@ const HomePage = () => {
     console.log("data",data)
 
     return (
-        <div>
+        <div className="mainDiv">
             <div>
                 {
                     Array.isArray(data)?
@@ -33,9 +34,10 @@ const HomePage = () => {
                                         <SlotCard
                                             key={i}
                                             name={slot[0] || ''}
-                                            image={slot[1] || ''}
-                                            pooja={slot[2] || ''}
-                                            time={slot[3] || ''}
+                                            date={slot[1] || ''}
+                                            image={slot[2] || ''}
+                                            pooja={slot[3] || ''}
+                                            time={slot[4] || ''}
                                         />
                                     )
                                 })
