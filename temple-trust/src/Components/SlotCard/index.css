@@ -9,8 +9,9 @@
 }
 
 .imageContainer{
-    background-color: blue;
+    background-color: #0000ff12;
     border-radius: 0.5rem;
+    height: fit-content;
 }
 
 .image{

@@ -11,13 +11,18 @@ export const getWorshipListSuccess  = (slots: any[]) => {
 
 export const getWorshipList = (setData: any) => {
     const googleSheetUrl = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQdEDgiSKLIScboR0F_g-E_nY0t-P9y6Bfph6Fct4IICF1G87dij7ls6tSAhErO9BY4xX3ur1bfXWYZ/pub?gid=0&single=true&output=csv";
+
     axios.get(googleSheetUrl)
     .then((res)=>{
         const csvData = res.data;
-        const rows = csvData.split('\n').map((row: any) => row.split(","));
-        console.log('rows', rows)
+        let rows = csvData.split('\n').map((row: any) => row.split(","));
+        console.log('rows', rows);
+
+        if(Array.isArray(rows)){
+            rows.shift()
+        } 
+
         setData(rows);
-        // return rows;
     })
     .catch(err => {
         console.log(err);

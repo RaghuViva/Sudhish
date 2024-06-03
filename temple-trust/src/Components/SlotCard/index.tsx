@@ -20,11 +20,14 @@ const SlotCard: React.FC<SlotCardPropsType> = (props) => {
             </div>
             <div>
                 <div>
-                    <p>{name}</p>
-                    <p>{pooja}</p>
+                    <p style={{fontSize:"22px", fontWeight: "600", textTransform: "capitalize", }}>{name}</p>
+                    <p style={{fontSize:"28px", fontWeight: "800", color:"#fb6464" }}>{pooja}</p>
                 </div>
                 <div>
-                    <p>{date} {time}</p>
+                    <p style={{display: "flex", justifyContent:"space-between", fontSize: "16px", fontWeight:"500"}}>
+                        <span>{date}</span>
+                        <span>{time}</span>
+                    </p>
                 </div>
             </div>
         </div>

@@ -9,3 +9,8 @@
     backdrop-filter: contrast(0.5);
     padding: 2rem 0rem;
 }
+
+.mainDiv select {
+    padding: 0.5rem 2rem;
+    border-radius: 0.5rem;
+}
