@@ -16,7 +16,6 @@ export const getWorshipList = (setData: any) => {
     .then((res)=>{
         const csvData = res.data;
         let rows = csvData.split('\n').map((row: any) => row.split(","));
-        console.log('rows', rows);
 
         if(Array.isArray(rows)){
             rows.shift()

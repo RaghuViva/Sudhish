@@ -18,27 +18,30 @@ const HomePage = () => {
     }
 
     useEffect(() => {
+        console.log("data : ", data);
+
         if(data){
+            console.log("Got data from google sheet successfully : ");
             let dates: any[] = [];
+            const today = new Date().toString().split(" ")[2];
 
             data.forEach((slot: any) => {
                 if(!dates.includes(slot[1])){
                     dates.push(slot[1]);
+
+                if(Number(slot[1]?.split("/")?.[0] || 0) === Number(today)){
+                    setSelectedDate(slot[1] || "");
+                }
                 }
             })
 
-            console.log(dates);
             setAvailableDates(dates);
-
-            setSelectedDate(dates[0] || "");
         }
     },[data]);
 
     useEffect(() => {
         getWorshipData();
     }, []);
-
-    console.log("data",selectedDate)
 
     return (
         <div className="mainDiv">
