@@ -13,6 +13,9 @@ const NonAuthenticatedNavbar = () => {
             </div>
             <div style={{display: "flex", gap:"1rem"}}>
                 <div>
+                    <Link to="/account-details">Account Details</Link>
+                </div>
+                <div>
                     <Link to="/sign-up">Sign Up</Link>
                 </div>
                 <div>

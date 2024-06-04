@@ -1,11 +1,20 @@
-.slot{
+.slot, .slot_AD{
     display: grid;
-    grid-template-columns: 5rem 1fr;
     gap: 1rem;
-    width: 25rem;
     padding: 1rem;
     border-radius: 0.5rem;
     background-color: white;
+}
+
+.slot{
+    grid-template-columns: 5rem 1fr;
+    width: 25rem;
+}
+
+.slot_AD{
+    grid-template-columns: 10rem 1fr;
+    width: 36rem;
+    border: 1px solid black;
 }
 
 .imageContainer{
@@ -14,8 +23,15 @@
     height: fit-content;
 }
 
+.image, .image_AD{
+    object-fit: contain;
+}
 .image{
     width: 5rem;
     height: 5rem;
-    object-fit: contain;
+}
+
+.image_AD{
+    width: 15rem;
+    height: 15rem;
 }

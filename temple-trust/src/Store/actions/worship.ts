@@ -27,3 +27,23 @@ export const getWorshipList = (setData: any) => {
         console.log(err);
     })
 };
+
+/* -------------Worship List--------------------- */
+export const getAccountList = (setData: any) => {
+    const googleSheetUrl = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQdEDgiSKLIScboR0F_g-E_nY0t-P9y6Bfph6Fct4IICF1G87dij7ls6tSAhErO9BY4xX3ur1bfXWYZ/pub?gid=0&single=true&output=csv";
+    
+    axios.get(googleSheetUrl)
+    .then((res)=>{
+        const csvData = res.data;
+        let rows = csvData.split('\n').map((row: any) => row.split(","));
+
+        if(Array.isArray(rows)){
+            rows.shift()
+        } 
+
+        setData(rows);
+    })
+    .catch(err => {
+        console.log(err);
+    })
+};
