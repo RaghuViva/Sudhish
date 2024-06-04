@@ -1,12 +1,15 @@
 .mainDiv{
-    background-image: url("https://i.pinimg.com/736x/2f/2e/4f/2f2e4fcbc5fb333592efd8857dffd1b1.jpg");
+    /* background-image: url("https://i.pinimg.com/736x/2f/2e/4f/2f2e4fcbc5fb333592efd8857dffd1b1.jpg"); */
+    /* background-image: url("https://i.pinimg.com/564x/41/25/a5/4125a516eed9fd0cce05047ca6ddeaae.jpg"); */
+    /* background-image: url("https://i.pinimg.com/564x/41/25/a5/4125a516eed9fd0cce05047ca6ddeaae.jpg"); */
+    background-image: url('../../Assets/images/temple-pic.jpg');
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 .mainDiv > div{
     height: 100%;
-    backdrop-filter: contrast(0.5);
+    backdrop-filter: contrast(0.9);
     padding: 2rem 0rem;
 }
 
