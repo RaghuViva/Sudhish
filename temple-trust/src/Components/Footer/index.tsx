@@ -5,7 +5,7 @@ const Footer = () => {
     return (
         <div className="footerContainer">
             <div>
-                <p style={{fontSize: "3rem", fontWeight: "600", fontStyle:"italic", }}>Rudhra bhumi Trust</p>
+                <p style={{fontSize: "3rem", fontWeight: "600", fontStyle:"italic", }}>Rudhrabhisheka Trust</p>
             </div>
             <div>
                 <p>Contact us : +913434343434333</p>

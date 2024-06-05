@@ -28,9 +28,8 @@ export const getWorshipList = (setData: any) => {
     })
 };
 
-/* -------------Worship List--------------------- */
-export const getAccountList = (setData: any) => {
-    const googleSheetUrl = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQdEDgiSKLIScboR0F_g-E_nY0t-P9y6Bfph6Fct4IICF1G87dij7ls6tSAhErO9BY4xX3ur1bfXWYZ/pub?gid=0&single=true&output=csv";
+/* ------------- data from google-sheet --------------------- */
+export const getDataFromGoogleSheet = (googleSheetUrl: string, setData: any) => {
     
     axios.get(googleSheetUrl)
     .then((res)=>{
