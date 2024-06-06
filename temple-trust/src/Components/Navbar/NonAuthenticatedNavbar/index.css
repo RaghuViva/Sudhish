@@ -14,3 +14,15 @@
 .Navbar a:hover{
     color: blue;
 }
+
+.Nav-container-2{
+    margin-top: 4rem;
+    flex-direction: column;
+}
+
+@media screen and (min-width: 900px) {
+    .Nav-container-2{
+        margin-top: 0rem;
+        flex-direction: row;
+    }
+}

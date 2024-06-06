@@ -18,8 +18,14 @@ const About = () => {
 
     return (
         <div>
-            <h1 style={{fontSize:"2.5rem", fontWeight: "600", textAlign: "center", marginTop:"2rem",}}>About Us</h1>
-            <div>
+            <iframe
+                src="https://drive.google.com/file/d/152hS9mhYi9mY2JMGVQSrWW52nwkkhFza/preview"
+                style={{
+                    width: "100%",
+                    height: "100%",
+                }}></iframe>
+
+            {/* <div>
                 <table style={{margin: "auto", marginTop:"1rem",}}>
                     <thead>
                         <tr>
@@ -45,7 +51,7 @@ const About = () => {
                         }
                     </tbody>
                 </table>
-            </div>
+            </div> */}
         </div>
     );
 };

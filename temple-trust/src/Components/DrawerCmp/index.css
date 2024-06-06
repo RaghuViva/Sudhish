@@ -1,0 +1,17 @@
+.DrawerCmp-contaier-1{
+    display: none;
+}
+
+.DrawerCmp-contaier-2{
+    display: block;
+}
+
+@media screen and (min-width: 900px) {
+    .DrawerCmp-contaier-1{
+        display: block;
+    }
+
+    .DrawerCmp-contaier-2{
+        display: none;
+    }
+}

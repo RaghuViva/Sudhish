@@ -5,10 +5,10 @@ const Footer = () => {
     return (
         <div className="footerContainer">
             <div>
-                <p style={{fontSize: "3rem", fontWeight: "600", fontStyle:"italic", }}>Rudhrabhisheka Trust</p>
+                <p className="footer-title" style={{fontWeight: "600", fontStyle:"italic", }}>Rudhrabhumi Trust</p>
             </div>
             <div>
-                <p>Contact us : +913434343434333</p>
+                <p>Contact us : +91 8095244525</p>
                 <p>Terms and Conditions</p>
                 <p>Privacy Policy</p>
             </div>

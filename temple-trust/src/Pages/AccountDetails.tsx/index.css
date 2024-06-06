@@ -2,7 +2,7 @@
 table, th, td {
     border: 1px solid black;
     border-collapse: collapse;
-    padding: 20px;
+    padding: 5px;
 }
 
 td, th{
@@ -10,11 +10,27 @@ td, th{
 }
 
 table{
-    margin: 1.5rem;
+    margin: 1.5rem !important;
     height: fit-content;
 }
 
 .AD_table_container{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.AD_table_container table{
+    width: 80%;
+    margin: auto;
+    
+}
+
+@media screen and (min-width: 1200px){
+    .AD_table_container{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    table, th, td {
+        padding: 20px;
+    }
 }

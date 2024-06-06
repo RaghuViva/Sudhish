@@ -22,9 +22,9 @@ const AccountDetails = () => {
         getAccountDetails();
     },[]);
 
-    console.log("debitData",debitData,"creditData",creditData )
-
     useEffect(() => {
+        console.log("debitData",debitData);
+
         if(Array.isArray(debitData)){
             setDebitTotal(debitData.reduce((total: number, current: any )=> {
                 let currentAmount = Number(current[3]);
@@ -37,6 +37,8 @@ const AccountDetails = () => {
     }, [debitData]);
 
     useEffect(() => {
+        console.log("creditData",creditData);
+
         if(Array.isArray(creditData)){
             setCreitTotal(creditData.reduce((total: number, current: any )=> {
                 let currentAmount = Number(current[3]);
@@ -46,9 +48,7 @@ const AccountDetails = () => {
                 return total;
             }, 0))
         }
-    }, [debitData]);
-
-    // console.log("AccountDetails : ", debitData, creditData);
+    }, [creditData]);
 
     return (
         // <div style={{
@@ -77,7 +77,7 @@ const AccountDetails = () => {
         //     }
         // </div>
         <div>
-            <h1 style={{fontSize:"2.5rem", fontWeight: "600", textAlign: "center"}}>
+            <h1 style={{fontSize:"2rem", fontWeight: "600", textAlign: "center"}}>
                 {
                     (creitTotal > debitTotal) ? (
                         `Net profit =  ${creitTotal - debitTotal}`
@@ -89,7 +89,7 @@ const AccountDetails = () => {
             <div className="AD_table_container">
                 <table>
                     <thead>
-                        <tr style={{fontSize: "2rem", fontWeight:"600", textAlign: "center",}}>
+                        <tr style={{fontSize: "1.5rem", fontWeight:"600", textAlign: "center",}}>
                             <th colSpan={4} style={{padding: "10px",}}>Debit table</th>
                         </tr>
                         <tr>
@@ -118,7 +118,7 @@ const AccountDetails = () => {
 
                 <table>
                     <thead>
-                    <tr style={{fontSize: "2rem", fontWeight:"600", textAlign: "center",}}>
+                    <tr style={{fontSize: "1.5rem", fontWeight:"600", textAlign: "center",}}>
                         <th colSpan={4} style={{padding: "10px",}}>Credit table</th>
                     </tr>
                         <tr>

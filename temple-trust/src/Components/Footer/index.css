@@ -1,7 +1,18 @@
 .footerContainer{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     padding: 1rem 3rem;
     background-color: black;
     color: white;
+}
+
+.footer-title{
+    font-size: 1.5rem;
+}
+
+@media screen and (min-width: 400px) {
+    .footer-title{
+        font-size: 3rem;
+    }
 }
